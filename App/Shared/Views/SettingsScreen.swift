@@ -4,20 +4,19 @@ struct SettingsScreen: View {
     @EnvironmentObject private var userInfo: UserInfo
     @EnvironmentObject private var session: OtterLinkSession
 
-    private var isUsernameValid: Bool {
-        !userInfo.username.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-    }
-
     var body: some View {
         Form {
             Section("Account") {
                 TextField("Username", text: $userInfo.username)
                     .textContentType(.username)
+                    .onChange(of: userInfo.username) { _ in
+                        userInfo.save()
+                    }
 
                 HStack {
                     Text("Local user ID")
                     Spacer()
-                    Text(userInfo.userID.uuidString.prefix(8))
+                    Text(String(userInfo.userID.uuidString.prefix(8)))
                         .foregroundColor(.secondary)
                         .font(.caption)
                 }
@@ -60,6 +59,5 @@ struct SettingsScreen: View {
         .onDisappear {
             session.rebuildAPI()
         }
-        .disabled(!isUsernameValid && false)
     }
 }
