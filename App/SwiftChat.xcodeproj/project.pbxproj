@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		OTL000000000000000000001 /* OtterLinkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OTL000000000000000000101 /* OtterLinkAPI.swift */; };
+		OTL000000000000000000002 /* OtterLinkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OTL000000000000000000102 /* OtterLinkSession.swift */; };
+		OTL000000000000000000003 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = OTL000000000000000000103 /* HomeScreen.swift */; };
 		C01B945C24E92CDE003F0EF6 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B945B24E92CDE003F0EF6 /* SettingsScreen.swift */; };
 		C01B945D24E92CDE003F0EF6 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B945B24E92CDE003F0EF6 /* SettingsScreen.swift */; };
 		C01B946224E9D7D5003F0EF6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B946124E9D7D5003F0EF6 /* UserInfo.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		OTL000000000000000000101 /* OtterLinkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtterLinkAPI.swift; sourceTree = "<group>"; };
+		OTL000000000000000000102 /* OtterLinkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtterLinkSession.swift; sourceTree = "<group>"; };
+		OTL000000000000000000103 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C01B945B24E92CDE003F0EF6 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		C01B946124E9D7D5003F0EF6 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		C037E17B24E80B09005466C9 /* SwiftChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChatApp.swift; sourceTree = "<group>"; };
@@ -109,8 +115,18 @@
 			children = (
 				C01B945B24E92CDE003F0EF6 /* SettingsScreen.swift */,
 				C037E19F24E80C07005466C9 /* ChatScreen.swift */,
+				OTL000000000000000000103 /* HomeScreen.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		OTL000000000000000000200 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				OTL000000000000000000101 /* OtterLinkAPI.swift */,
+				OTL000000000000000000102 /* OtterLinkSession.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C037E1A324E81C92005466C9 /* Models */ = {
@@ -225,6 +241,9 @@
 				C01B945C24E92CDE003F0EF6 /* SettingsScreen.swift in Sources */,
 				C01B946224E9D7D5003F0EF6 /* UserInfo.swift in Sources */,
 				C037E1A024E80C07005466C9 /* ChatScreen.swift in Sources */,
+				OTL000000000000000000003 /* HomeScreen.swift in Sources */,
+				OTL000000000000000000001 /* OtterLinkAPI.swift in Sources */,
+				OTL000000000000000000002 /* OtterLinkSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +257,9 @@
 				C01B945D24E92CDE003F0EF6 /* SettingsScreen.swift in Sources */,
 				C01B946324E9D7D5003F0EF6 /* UserInfo.swift in Sources */,
 				C037E1A124E80C07005466C9 /* ChatScreen.swift in Sources */,
+				OTL000000000000000000003 /* HomeScreen.swift in Sources */,
+				OTL000000000000000000001 /* OtterLinkAPI.swift in Sources */,
+				OTL000000000000000000002 /* OtterLinkSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
