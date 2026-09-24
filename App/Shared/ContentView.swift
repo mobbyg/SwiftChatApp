@@ -1,21 +1,48 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by Freek Zijlmans on 15/08/2020.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-	@StateObject private var userInfo = UserInfo()
-	
+    @StateObject private var userInfo = UserInfo()
+    @StateObject private var session = OtterLinkSession()
+
     var body: some View {
-		NavigationView {
-			SettingsScreen()
-		}
-		.environmentObject(userInfo)
-		.navigationViewStyle(StackNavigationViewStyle())
+        TabView {
+            NavigationView {
+                HomeScreen()
+            }
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+
+            NavigationView {
+                PeopleScreen()
+            }
+            .tabItem {
+                Label("People", systemImage: "person.2")
+            }
+
+            NavigationView {
+                CommunitiesScreen()
+            }
+            .tabItem {
+                Label("Communities", systemImage: "person.3")
+            }
+
+            NavigationView {
+                ChatScreen()
+            }
+            .tabItem {
+                Label("Chat", systemImage: "bubble.left.and.bubble.right")
+            }
+
+            NavigationView {
+                SettingsScreen()
+            }
+            .tabItem {
+                Label("Settings", systemImage: "gear")
+            }
+        }
+        .environmentObject(userInfo)
+        .environmentObject(session)
     }
 }
 
