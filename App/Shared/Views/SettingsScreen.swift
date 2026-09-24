@@ -8,7 +8,6 @@ struct SettingsScreen: View {
         Form {
             Section("Account") {
                 TextField("Username", text: $userInfo.username)
-                    .textContentType(.username)
                     .onChange(of: userInfo.username) { _ in
                         userInfo.save()
                     }
